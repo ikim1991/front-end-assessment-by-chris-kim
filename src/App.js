@@ -1,9 +1,47 @@
 import './App.css';
+import HeroSection from './components/HeroSection';
+import Red from './components/Red';
+import Yellow from './components/Yellow';
+import Perks from './components/Perks';
+import Reviews from './components/Reviews';
+import GetExpCon from './components/GetExpCon';
+import Pricing from './components/Pricing';
+import Payments from './components/Payments';
+import { Route, Switch } from 'react-router';
+
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello, World!</h1>
+      <Switch>
+        <Route exact path="/">
+          <h1>Hello, World!</h1>
+        </Route>
+        <Route exact path="/hero-section">
+          <HeroSection/>
+        </Route>
+        <Route exact path="/red">
+          <Red/>
+        </Route>
+        <Route exact path="/yellow">
+          <Yellow/>
+        </Route>
+        <Route exact path="/perks">
+          <Perks/>
+        </Route>
+        <Route exact path="/reviews">
+          <Reviews/>
+        </Route>
+        <Route exact path="/get-exp-con">
+          <GetExpCon/>
+        </Route>
+        <Route exact path="/pricing">
+          <Pricing/>
+        </Route>
+        <Route exact path="/payments">
+          <Payments/>
+        </Route>
+      </Switch>
     </div>
   );
 }
