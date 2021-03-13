@@ -8,14 +8,14 @@ import GetExpCon from './components/GetExpCon';
 import Pricing from './components/Pricing';
 import Payments from './components/Payments';
 import { Route, Switch } from 'react-router';
-
+import Home from './components/Home';
 
 function App() {
   return (
     <div className="App">
       <Switch>
         <Route exact path="/">
-          <h1>Hello, World!</h1>
+          <Home/>
         </Route>
         <Route exact path="/hero-section">
           <HeroSection/>
