@@ -5,11 +5,124 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: center;;
+    align-items: center;
+    cursor: none;
+}
+
+.cursor{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+}
+
+.cursor-delay{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.2s ease-out;
+}
+
+/* Animation for Transitioning Image from bottom up */
+@keyframes leftRight{
+    from{right: -100%}
+    to{right:5%}
+}
+
+/* Animation for Transitioning Image from bottom up */
+@keyframes rightLeft{
+    from{left: -100%}
+    to{left:5%}
+}
+
+/* Animation for Fading In Effect for Images */
+@keyframes fadeIn{
+    from{opacity: 0}
+    to{opacity: 0.8}
+}
+
+.red-image-even{
+    position: absolute;
+    width: 90%;
+    text-align: center;
+    animation: fadeIn 3s ease-in, leftRight 3s ease-out;
+    cursor: none;
+}
+
+.red-image-odd{
+    position: absolute;
+    width: 90%;
+    text-align: center;
+    animation: fadeIn 3s ease-in, rightLeft 3s ease-out;
+    cursor: none;
+}
+
+/* Fade In Button with Image on Render */
+@keyframes buttonFadeIn{
+    from{opacity: 0}
+    to{opacity: 1}
 }
 
 #audio-button{
+    position: absolute;
+    left: 2.5%;
+    bottom: 2.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, #ffff66 0%, #ff0000 100%);
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
     color: white;
     cursor: pointer;
-    font-size: 3em;
+    font-size: 2em;
+    animation: buttonFadeIn 2s ease-in backwards;
+    z-index: 1;
+}
+
+#audio-button:hover{
+    background: linear-gradient(to bottom right, #ff99ff 0%, #3399ff 100%);
+}
+
+.try-it-now{
+    text-decoration: none;
+    font-size: 2em;
+    color: white;
+    
+}
+
+.see-demo{
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+}
+
+.red-buttons{
+    display: flex;
+    width: 100%;
+    position: absolute;
+    bottom: 2.5%;
+    left: 10%;
+    z-index: 1;
+}
+
+.red-button{
+    appearance: button;
+    background: linear-gradient(to bottom right, #ffff66 0%, #ff0000 100%);
+    padding: 15px;
+    border-radius: 15px;
+    margin: 0 15px;
+    animation: buttonFadeIn 2s ease-in backwards;
+}
+
+.red-button:hover{
+    background: linear-gradient(to bottom right, #ff99ff 0%, #3399ff 100%);
 }

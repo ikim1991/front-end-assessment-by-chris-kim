@@ -5,7 +5,7 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: center;;
+    align-items: center;
 }
 
 /* Animation for Fading In Effect for Images */
@@ -46,7 +46,7 @@
   }
   
 .highlighted{
-    background: linear-gradient(to bottom right, #ffff66 0%, #ff0000 100%);;
+    background: linear-gradient(to bottom right, #ffff66 0%, #ff0000 100%);
 }
 
 .dot:hover{

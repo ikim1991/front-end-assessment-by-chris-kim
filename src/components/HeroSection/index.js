@@ -54,7 +54,6 @@ const HeroSection = () => {
 
         // Clean up
         return () => clearInterval(intervalId)
-
     })
 
     return(
